@@ -4,7 +4,7 @@ import os
 
 class Auth():
   def __init__(self):
-    registers = 'data/registers.db'
+    registers = os.path.abspath(os.path.join(os.getcwd(), 'notepad', 'data', 'registers.db'))
     self.connection = sqlite3.connect(registers)
     self.cursor = self.connection.cursor()
     
@@ -20,11 +20,11 @@ class Auth():
             print('═' * 40)
             option = str(input("""
 ╔════════════════════════════════════╗
-║        MAIN MENU                  ║
-╠════════════════════════════════════╣
-║ [1] Login                         ║
-║ [2] Register new user             ║
-║ [3] Exit                          ║
+║               MAIN MENU            ║      
+  ══════════════════════════════════
+║ [1] Login                          ║      
+║ [2] Register new user              ║      
+║ [3] Exit                           ║      
 ╚════════════════════════════════════╝
 >>> """))
             print('═' * 40)
@@ -37,9 +37,6 @@ class Auth():
                   m = Menu()
                   m.Options(name)
                   print('═' * 40)
-                  opt = input('Return to login? [Y/N]\n>>> ').lower()
-                  if 'y' in opt:
-                    break
               else:
                 Auth.clear()
                 print('Invalid login.')

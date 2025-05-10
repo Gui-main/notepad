@@ -1,10 +1,10 @@
 import sqlite3
-
+import os
 from time import sleep
 
 class Functions():
   def __init__(self):
-    users_notes = 'data/users_notes.db'
+    users_notes = os.path.abspath(os.path.join(os.getcwd(), 'notepad', 'data', 'users_notes.db'))
     self.connection = sqlite3.connect(users_notes)
     self.cursor = self.connection.cursor()
     

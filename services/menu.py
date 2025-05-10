@@ -6,12 +6,13 @@ class Menu():
     t = Functions()
     option = str(input("""
 ╔════════════════════════════════════╗
-║        MANAGEMENT OPTIONS         ║
-╠════════════════════════════════════╣
-║ [1] View titles                   ║
-║ [2] View note											║
-║ [3] Add note                      ║
-║ [4] Delete note                   ║
+║               FUNCTIONS          
+  ══════════════════════════════════
+║ [1] View titles                      
+║ [2] View note	
+║ [3] Add note                      
+║ [4] Delete note                      
+║ [control c + enter] To Exit                      
 ╚════════════════════════════════════╝
 >>> """))
     if '1' in option:
@@ -22,3 +23,5 @@ class Menu():
       t.add_note(name)
     elif '4' in option:
       t.remove_note(name)
+    else:
+    	print('Invalid option.')
