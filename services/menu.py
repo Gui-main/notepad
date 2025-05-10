@@ -1,21 +1,24 @@
-from model.tasks import Tasks 
+from model.functions import Functions
 
 class Menu():
   @staticmethod
   def Options(name):
-    t = Tasks()
+    t = Functions()
     option = str(input("""
 ╔════════════════════════════════════╗
 ║        MANAGEMENT OPTIONS         ║
 ╠════════════════════════════════════╣
-║ [1] View tasks                    ║
-║ [2] Add tasks                     ║
-║ [3] Delete tasks                  ║
+║ [1] View titles                   ║
+║ [2] View note											║
+║ [3] Add note                      ║
+║ [4] Delete note                   ║
 ╚════════════════════════════════════╝
 >>> """))
     if '1' in option:
-      t.view_tasks(name)
+      t.view_titles(name)
     elif '2' in option:
-      t.add_task(name)
+    	t.view_note(name)
     elif '3' in option:
-      t.remove_task(name)
+      t.add_note(name)
+    elif '4' in option:
+      t.remove_note(name)

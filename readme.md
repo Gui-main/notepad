@@ -1,18 +1,19 @@
-# Task Manager
+# NotePad
 
-A simple task management system with user login, running 100% in the terminal.
+A simple notepad system with user login, running 100% in the terminal.
 Developed with Python and SQLite, using a modular structure, organized code, and exception handling.
 
 ## Features
 
 [x] User registration and login
 
-[x] Add tasks
+[x] Add notes
 
-[x] List tasks
+[x] List titles
 
-[x] Delete tasks
+[x] View a specific note
 
+[x] Delete notes
 
 ## Requirements
 

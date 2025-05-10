@@ -14,7 +14,7 @@ class Auth():
   
   def user(self):
       print('═' * 40)
-      print('TASK MANAGER FOR TERMINAL'.center(40))
+      print('NOTEPAD FOR TERMINAL'.center(40))
       while True:
         try:
             print('═' * 40)
